@@ -9,6 +9,14 @@ updates:
     directory: "/javascript"
     schedule:
       interval: "weekly"
+    groups:
+      # Group security updates for npm dependencies
+      # into a single pull request
+      npm:
+        applies-to: security-updates
+        patterns:
+          - "*"
+
   - package-ecosystem: bundler
     directory: "/ruby"
     schedule:
